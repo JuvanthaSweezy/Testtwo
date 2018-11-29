@@ -1,0 +1,100 @@
+/*
+ * Juvantha crawford
+ */ 
+  
+import java.util.*;
+
+public class Testtwo
+{
+public static void main(String[] args)
+{
+Scanner myInput = new Scanner(System.in);
+//Deteriming variables
+System.out.println("What is team 1 name");
+String name1 = myInput.next();//Team name
+
+System.out.println("What is team 2 name");
+String name2 = myInput.next();//Team name
+
+System.out.println("What is team 1 win");
+int wins = myInput.nextInt();// team wins
+
+System.out.println("What is team 1 loss");
+int lose = myInput.nextInt();// team loss
+
+System.out.println("What is team 1 ties");
+int ties = myInput.nextInt();// team ties
+
+System.out.println("What is team 2 win");
+int wins2 = myInput.nextInt();// team wins
+
+System.out.println("What is team 2 loss");
+int lose2 = myInput.nextInt();// team loss
+
+System.out.println("What is team 2 ties");
+int ties2 = myInput.nextInt();// team ties
+
+
+
+
+Random rand = new Random();
+int win2 = rand.nextInt(10)  +1;
+int loss2 = rand.nextInt(10) +1;
+int ties3 = rand.nextInt(10) +1;
+
+//outputting stats team 1
+System.out.println("you have this many wins team 1 " +  wins);
+System.out.println("How many losses do you have " +   lose);
+System.out.println("How many ties do u have team 1 " +   ties);
+
+//outputting team 2 stats
+System.out.println("you have this many wins team 2 " +   win2);
+System.out.println("you have this many losses team 2 " +  lose2);
+System.out.println("you have this many ties team 2 " +   ties2);
+
+//Declaring math varialbles 
+int points = ((wins*2) + ties);
+int points2 = ((win2*2) + ties2);
+int total = (wins + lose + ties);
+int total2 = (win2 + loss2 + ties2);
+double decimal = (total/wins);
+double decimal2 = (total2/win2);
+
+
+//Outputing season for team 1
+if (points < 10)//
+{
+  System.out.println("Try harder next year" + " " +   name1);
+}
+else if (points >10 && points <20)
+{
+  System.out.println("You had a good season team 1" + " " +  name1);
+}
+else
+{
+  System.out.println("You had a great season");
+}
+
+
+//Outputting season for team 2 
+if (points2 < 10)//
+{
+  System.out.println("Try harder next year" + " " +  name2);
+}
+else if (points2 >10 && points2 <20)
+{
+  System.out.println("You had a good season team 2" + " " +  name2);
+}
+else
+{
+  System.out.println("You had a great season" + " " +  name2);
+}
+
+}
+}
+
+
+
+  
+    
+
